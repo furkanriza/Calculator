@@ -70,12 +70,12 @@ public class EnglishNumberConversionServiceImpl {
 		}
 		
 		long finalResult = result + current;
-		System.out.println("toNumber: " + finalResult);
+		// System.out.println("toNumber: " + finalResult);
 		return finalResult;
     }
 
 	public static String toText(long num) {
-		//System.out.println("toText: " + num);
+		//System.out.println("EnglishNumberConversionServiceImpl toText: " + num);
 		if (num < 0) {
             return "minus " + toText(-num);
         }
@@ -99,7 +99,7 @@ public class EnglishNumberConversionServiceImpl {
         if (num < 1000000000) {
             return toText(num / 1000000) + " million" + ((num % 1000000 != 0) ? " " : "") + toText(num % 1000000);
         }
-        //System.out.println("toTextres: " + num);
+        //System.out.println("EnglishNumberConversionServiceImpl toText2: " + num);
         return toText(num / 1000000000) + " billion" + ((num % 1000000000 != 0) ? " " : "") + toText(num % 1000000000);
 		
 	}
